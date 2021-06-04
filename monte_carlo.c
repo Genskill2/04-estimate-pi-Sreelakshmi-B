@@ -10,7 +10,21 @@ float frandom() {
   float ret = (float)q/(float)RAND_MAX;
   return ret;
 }
-
+float mc_pi(int n)
+{
+float x=0, y=0;
+int count=0;
+float pi;
+for(int i=0;i<n;i++)
+{
+x=frandom();
+y=frandom();
+if((x*x+y*y)<=1)
+count+=1;
+}
+pi= (float)(4*count)/n;
+return (pi);
+}
 int main(void) {
   float pi0;
   float pi1;
